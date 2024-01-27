@@ -17,7 +17,7 @@ echo
 
 echo Fixing time servers...
 sudo cp -f /usr/bin/timesyncd.conf /etc/systemd
-systemctl restart systemd-timesyncd
+#systemctl restart systemd-timesyncd
 
 sudo cp -f /usr/bin/ntp.conf /etc
 systemctl restart ntp
@@ -34,4 +34,4 @@ systemctl status rc-local
 sleep 11
 echo
 
-bash fix-resolv_conf.sh
+sudo bash fix-resolv_conf2.sh
